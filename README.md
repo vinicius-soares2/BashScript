@@ -1,3 +1,3 @@
-#BashScript
-
-- Programa feito em bash.
+# SHELL SCRIPT
+- Para roda: chmod +x Baixador.sh
+- ./Baixador.sh
