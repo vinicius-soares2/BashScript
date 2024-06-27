@@ -5,3 +5,11 @@
 - Adição de uma variável para o link do arquivo `$LINKTHEFILE`.
 - Adição de uma ideia de escrever um diretório `$DIRTHEFILE`.
 
+# Versão 0.2
+
+### 2024-06-26:
+- Adição de argumentos e apresentação do programa.
+- Adição de 'getopts'.
+- Adição de 3 variaveis, '$nome', '$link', '$diretorio' com 'case'.
+- Adição de um comando direto para o diretorio e "Downloader" do arquivo.
+
