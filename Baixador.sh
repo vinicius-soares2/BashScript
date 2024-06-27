@@ -1,27 +1,26 @@
 #!/bin/bash
+
+# Versão 3: Adicão de nome e extensão de arquivos, links e diretorios.
 #
-# Versão: Tudo Direto do shell
-# Vinicius Soares, Julho de 2014.
+# Vinicius, Julho de 2024
 #
-# Apresentação 
-echo "DIGITE O NOME :"
-read NAMETHEFILE
-# Definido link pro seu arquivo
-echo "LINK DO ARQUIVO:"
-read LINKTHEFILE
-#
-# Salvando em um pasta
-echo "Escreva o caminho que ficara salvo: "
-read DIRTHEFILE
-echo "Seu diretorio: ${DIRTHEFILE}"
-#
-# Nesta parte vamos para o diretorio Citado pelo usuario
-cd ${DIRTHEFILE}
-wget -O ${NAMETHEFILE} ${LINKTHEFILE}
-#
-# Listando o diretorio onde esta o arquivo
-ls ${NAMETHEFILE}
-#
-# Voltando pro direorio do Baixador
-echo "Seu Diretorio Atual:"
-cd -
+# Apresentação do programa
+echo "USO: $(basename "$0") -a [NOME] -b [LINK] -c [DIRETORIO]
+
+-a	Nome e extensão de arquivo
+-b	Link do arquivo
+-c	Caminho de diretorio
+"
+# Nossa Operação pesada com getopts e while e case.  
+while getopts a:b:c options;
+do
+	case $options in
+		a)	nome=$OPTARG;;
+		b)	link=$OPTARG;;
+		c)	diretorio=$OPTARG;;
+	esac
+done
+
+# Nesta Operação vamos para diretorio ditado e usamos nosso downloader com dados passados.
+cd ${diretorio} ; wget -O ${nome} ${link}
+

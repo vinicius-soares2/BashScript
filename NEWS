@@ -1,3 +1,8 @@
-Novidades da versão 0.1:
+# Novidades da versão 0.1:
 	- Um programa simples e direto com instrução.
 	- Uso programa do shell linux, o lendario wget.
+
+# Novidades da versão 0.2:
+    - Programa refeito do zero, com uso de novos comandos como while e getopts.
+    - Adição direta de argumentos.
+    
